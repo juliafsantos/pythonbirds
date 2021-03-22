@@ -17,6 +17,9 @@ class Pessoa:
     def nome_e_atributos_de_classe(cls):
         return f'{cls} - olhos {cls.olhos}'
 
+class Homem(Pessoa):
+     pass
+
 if __name__ == '__main__':
     julia = Pessoa(nome='Julia')
     leo = Pessoa(julia, nome='Leo')
@@ -34,4 +37,8 @@ if __name__ == '__main__':
     julia.sobrenome = 'Santos'
     print(julia.__dict__)
     print(leo.__dict__)
+    pessoa = Pessoa('Anonimo')
+    # Pergunta se é uma instância
+    print(isinstance(pessoa, Pessoa))
+    print(isinstance(pessoa, Homem))
 
